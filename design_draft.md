@@ -19,6 +19,18 @@
   - `--ordered-resources string`                           Mapping Kinds to an ordered list of specific resources of that Kind
   - `--selector labelSelector`                             Only back up resources matching this label selector
 
+
+## Finalize Flags:
+  - `--exclude-namespaces stringArray` 
+  - `--exclude-resources stringArray` 
+  - `--include-resources stringArray` 
+  - `--include-cluster-resources optionalBool`
+  - `--or-selector orLabelSelector`                        Backup resources matching at least one of the label selector from the list
+  - `--ordered-resources string`                           Mapping Kinds to an ordered list of specific resources of that Kind
+  - `--selector labelSelector`  
+
+
+
 ### **Some Example which solves user requirements:**
 
 **Backup an Application's Resources Including Dependencies**:
@@ -40,25 +52,29 @@ Args:
   --exclude-resources=secrets,configmaps \
   --include-cluster-resources=true
 ```
+
 **Backup Specific Namespaced Resources Across Multiple Namespaces**
 ```yaml
 Backup Type: Cluster
 Args:
-  --include-namespace-scoped-resources=deployments.apps,services \
+  --include-resources=deployments.apps,services \
   --exclude-namespaces=kube-system,default
 ```
+
 **Backup Specific Resources Ordered by Priority**
 ```yaml
 Backup Type: Cluster,Namespace
   --include-resources=deployments.apps,statefulsets.apps,daemonsets.apps \
   --ordered-resources="deployments.apps=nginx-deployment,my-deployment statefulsets.apps=my-statefulset daemonsets.apps=my-daemonset"
 ```
+
 **Backup All CRDs of a Specific Group**
 ```yaml
 Backup Type: Cluster
 Args:
   --include-resources=customresourcedefinitions.apiextensions.k8s.io
 ```
+
 **Backup CR and CRDS**
 ```yaml
 Backup Type: Cluster
