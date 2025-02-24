@@ -1,1 +1,38 @@
-{"apiVersion":"v1","kind":"Namespace","metadata":{"creationTimestamp":"2025-02-05T10:08:28Z","labels":{"kubernetes.io/metadata.name":"default"},"managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:labels":{".":{},"f:kubernetes.io/metadata.name":{}}}},"manager":"k3s","operation":"Update","time":"2025-02-05T10:08:28Z"}],"name":"default","resourceVersion":"67","uid":"a5e575c1-9043-41e2-a913-e12c7390f20d"},"spec":{"finalizers":["kubernetes"]},"status":{"phase":"Active"}}
+{
+  "apiVersion": "v1",
+  "kind": "Namespace",
+  "metadata": {
+    "creationTimestamp": "2025-02-05T10:08:28Z",
+    "labels": {
+      "kubernetes.io/metadata.name": "default"
+    },
+    "managedFields": [
+      {
+        "apiVersion": "v1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:labels": {
+              ".": {},
+              "f:kubernetes.io/metadata.name": {}
+            }
+          }
+        },
+        "manager": "k3s",
+        "operation": "Update",
+        "time": "2025-02-05T10:08:28Z"
+      }
+    ],
+    "name": "default",
+    "resourceVersion": "67",
+    "uid": "a5e575c1-9043-41e2-a913-e12c7390f20d"
+  },
+  "spec": {
+    "finalizers": [
+      "kubernetes"
+    ]
+  },
+  "status": {
+    "phase": "Active"
+  }
+}

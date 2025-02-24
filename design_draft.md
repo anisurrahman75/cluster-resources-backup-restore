@@ -29,7 +29,39 @@
   - `--ordered-resources string`                           Mapping Kinds to an ordered list of specific resources of that Kind
   - `--selector labelSelector`  
 
+# Backup Data Format:
+```bash
+ resources
+│   ├── clusterrolebindings.rbac.authorization.k8s.io
+│   │   ├── cluster
+│   │   │   └── my-clusterrolebinding.json
+│   │   └── v1-preferredversion
+│   │       └── cluster
+│   │           └── my-clusterrolebinding.json
+│   ├── clusterroles.rbac.authorization.k8s.io
+│   │   ├── cluster
+│   │   │   └── my-clusterrole.json
+│   │   └── v1-preferredversion
+│   │       └── cluster
+│   │           └── my-clusterrole.json
+│   ├── configmaps
+│   │   ├── namespaces
+│   │   │   └── default
+│   │   │       └── my-config.json
+│   │   └── v1-preferredversion
+│   │       └── namespaces
+│   │           └── default
+│   │               └── my-config.json
+│   ├── deployments.apps
+│   │   ├── namespaces
+│   │   │   └── default
+│   │   │       └── my-deployment.json
+│   │   └── v1-preferredversion
+│   │       └── namespaces
+│   │           └── default
+│   │               └── my-deployment.json
 
+```
 
 ### **Some Example which solves user requirements:**
 

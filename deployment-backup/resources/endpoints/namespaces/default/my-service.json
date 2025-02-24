@@ -1,1 +1,61 @@
-{"apiVersion":"v1","kind":"Endpoints","metadata":{"annotations":{"endpoints.kubernetes.io/last-change-trigger-time":"2025-02-11T10:48:29Z"},"creationTimestamp":"2025-02-11T10:48:14Z","labels":{"app":"my-app"},"managedFields":[{"apiVersion":"v1","fieldsType":"FieldsV1","fieldsV1":{"f:metadata":{"f:annotations":{".":{},"f:endpoints.kubernetes.io/last-change-trigger-time":{}},"f:labels":{".":{},"f:app":{}}},"f:subsets":{}},"manager":"k3s","operation":"Update","time":"2025-02-11T10:48:29Z"}],"name":"my-service","namespace":"default","resourceVersion":"521035","uid":"66b533b8-2f0b-4990-9f26-babbd75f2ead"},"subsets":[{"addresses":[{"ip":"10.42.0.116","nodeName":"anisur","targetRef":{"kind":"Pod","name":"my-deployment-6fbcd456cf-8rxpj","namespace":"default","uid":"a397eb6e-22fb-46e9-aaa9-ac479995b804"}}],"ports":[{"port":8080,"protocol":"TCP"}]}]}
+{
+  "apiVersion": "v1",
+  "kind": "Endpoints",
+  "metadata": {
+    "annotations": {
+      "endpoints.kubernetes.io/last-change-trigger-time": "2025-02-11T10:48:29Z"
+    },
+    "creationTimestamp": "2025-02-11T10:48:14Z",
+    "labels": {
+      "app": "my-app"
+    },
+    "managedFields": [
+      {
+        "apiVersion": "v1",
+        "fieldsType": "FieldsV1",
+        "fieldsV1": {
+          "f:metadata": {
+            "f:annotations": {
+              ".": {},
+              "f:endpoints.kubernetes.io/last-change-trigger-time": {}
+            },
+            "f:labels": {
+              ".": {},
+              "f:app": {}
+            }
+          },
+          "f:subsets": {}
+        },
+        "manager": "k3s",
+        "operation": "Update",
+        "time": "2025-02-11T10:48:29Z"
+      }
+    ],
+    "name": "my-service",
+    "namespace": "default",
+    "resourceVersion": "521035",
+    "uid": "66b533b8-2f0b-4990-9f26-babbd75f2ead"
+  },
+  "subsets": [
+    {
+      "addresses": [
+        {
+          "ip": "10.42.0.116",
+          "nodeName": "anisur",
+          "targetRef": {
+            "kind": "Pod",
+            "name": "my-deployment-6fbcd456cf-8rxpj",
+            "namespace": "default",
+            "uid": "a397eb6e-22fb-46e9-aaa9-ac479995b804"
+          }
+        }
+      ],
+      "ports": [
+        {
+          "port": 8080,
+          "protocol": "TCP"
+        }
+      ]
+    }
+  ]
+}
